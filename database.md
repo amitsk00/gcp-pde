@@ -3,7 +3,7 @@
 ## DataSTore
 
 * mongoDB like document DB
-* it has
+* it has `kind > entity > property`
   * kind as table
   * entity as row
   * Property as column
@@ -23,7 +23,7 @@
 
 * avoid hot spotting
   * dont use auto incr number or timestamp as key
-  * use V4 UUID as key
+  * use `V4 UUID` as key
   * use shard and ur own value as custom prim key (for sequential data)
 
 ## BigTable
@@ -47,7 +47,7 @@
   * Let a user read an authorized view but not modify it.
   * Let a user view data from only one of multiple authorized views of a table
 
-* Roles
+### Roles
 
 * Bigtable Administrator (roles/bigtable.admin)
 * Bigtable Reader (roles/bigtable.reader)

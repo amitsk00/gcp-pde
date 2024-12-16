@@ -22,7 +22,6 @@
     * Add a regularization penalty to the loss function to prevent overly complex models
     * L1 Regularization
       * L1 regularization adds a penalty term proportional to the absolute values of the model’s weights to the loss function
-      * L1 regularization adds a penalty term proportional to the absolute values of the model’s weights to the loss function
       * You suspect many features are irrelevant or redundant.
       * You want a sparse model with fewer non-zero weights for interpretability and efficiency.
 
@@ -30,20 +29,19 @@
       * L2 regularization adds a penalty proportional to the squared values of the weights:
       * L2 regularization does not drive weights to zero but instead shrinks them toward smaller values
       * You expect most features to have some contribution to the prediction.
-      * You want to reduce overfitting without completely eliminating any features.
-
+      * You want to reduce overfitting *without completely eliminating any features*.
     * Dropout
       * Randomly disable a fraction of neurons during training to prevent co-dependencies
-
     * Early Stopping
+
   * Improve data Quality
     * Data Augmentation
       * Artificially expand your dataset with transformations (e.g., rotations, flips, cropping).
-
     * Add more training data
     * Data pre processing
+
   * Reduce model complexity
-  * USer better training
+  * Use better training
     * Batch normalization
     * Optimize learning rate
   * Evaluate training process
@@ -102,7 +100,7 @@
 
 * Zip code is `categorical` feature as numeric values has no significance (like greater than or smaller then etc)
 
-* if more "no" than "yes", then `recall` ( true positive rate ) (denom as FP)
+* if more "no" than "yes", then `recall` ( true positive rate ) (denom as FN)
   * TP / ( TP + FN )
   * recall improves when false negatives decrease
   * Use when false negatives are more expensive than false positives (FP are easy to handle)
@@ -112,7 +110,7 @@
     * Security applications, such as identifying potential threats
     * spam email (to catch all spams) (some good mails into spam)
 
-* if nore "yes" than "no", then `precision` (denom as FN)
+* if nore "yes" than "no", then `precision` (denom as FP)
   * TP / ( TP + FP )
   * Precision improves as false positives decrease
   * Use when it's very important for positive predictions to be accurate
@@ -123,9 +121,9 @@
 
 |  Aspect |  Recall |  Precision|  
 |  --- |   --- |  --- |  
-| Measures |  how well the model identifies all relevant instances (true positives) | ow many of the model's positive predictions are actually correct |
+| Measures |  how well the model identifies all relevant instances (true positives) | how many of the model's positive predictions are actually correct |
 |  |  TP / ( TP + FN )  |   TP / ( TP + FP ) |
-|  Focus | Catching all true positives (minimizing false negatives) | Avoiding false positives |  
+|  **Focus** | Catching all true positives (minimizing false negatives) | Avoiding false positives |  
 | Interpretation | Of all the actual positive cases, how many did the model correctly identify? | Of all the predicted positive cases, how many were truly positive? |
 |  When to Prioritize? | When missing positives is costly (eg, detecting diseases) | When false positives are costly (eg, fraud detection) |  
 |  What It Measures | Coverage of actual positives | Accuracy of positive predictions |  
