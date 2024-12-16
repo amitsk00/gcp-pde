@@ -184,5 +184,3 @@
   * Fine tune alert thresholds.
   * Use feature attributions to detect data drift or skew.
   * Use BigQuery to support model monitoring.
-
-​

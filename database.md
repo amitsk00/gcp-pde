@@ -16,7 +16,7 @@
   * There isn't a hash index type in Cloud Firestore
   * Composite index needs to be created manually - always with mult columns
 
-* index is mandatory as no scan posisble otherwise
+* index is mandatory as *no scan posisble* otherwise
   * single (atomic / built in on all fields) or composite (needs to be created manually)
 
 ## Spanner

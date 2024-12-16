@@ -144,7 +144,7 @@
   * Cost per user
   * Query Count by User
 
-## tmp
+## to be studied
 
 * Redis
 * memcached
