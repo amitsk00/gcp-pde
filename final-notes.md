@@ -44,18 +44,16 @@
   * row keys should be reasonably short (10 - 100bytes)
 
 * Clusters (and hence Nodes) are `zonal` in nature
-
-    > Note: In case of multi cluster, it can span across otehr zones or regions
+  > Note: In case of multi cluster, it can span across other zones or regions
 
 |  tall & narrow |  short & wide |
 | --- | --- |
-| many rows few columns | fewere rows, many columns   |
+| many rows few columns | fewer rows, many columns   |
 | efficient for high write /append rates | read optimized data  |
 | best for logs, time series data, IOT, events |  best for user profile, config, metadata etc |
 | might need mult reads to aggregate data | easy to fetch data  |
 |   |  columns and column family can grow faster  |
 |   |  wasted storage if data for some columns missing |
-
 
 * BigTable - separate 2 workloads
   * isntance with 2 clusters
@@ -71,11 +69,15 @@
 
 ## Dataflow
 
-* Dataflow - howto change code/template
+* Dataflow - how to change code/template
   * to change in-flight options, like worker count etc, simple `gcloud` command will work
   * for a replacement job
-    * gcloud dataflow flex-template run JOB1  --transform-name-mappings={"oldTransform1":"newTransform1","oldTransform2":"newTransform2",...}
-    * intermediate state data n buffered data is **preserved** (not in mem cache though)
+
+    ```shell
+      gcloud dataflow flex-template run JOB1  --transform-name-mappings={"oldTransform1":"newTransform1","oldTransform2":"newTransform2",...}
+    ```
+
+    * intermediate state data n buffered data is **preserved** (not in-memory cache though)
 
 ## BQ
 
@@ -144,13 +146,12 @@
 
 ## tmp
 
-Redis
-memcached
-BQ - set quota for SA
-BQ - external tables
-dataplex
-data catalog
-datastore vs firestore
-
-GCP Analytics Hub
-Dataplex
+* Redis
+* memcached
+* BQ - set quota for SA
+* BQ - external tables
+* dataplex
+* data catalog
+* datastore vs firestore
+* GCP Analytics Hub
+* Dataplex
